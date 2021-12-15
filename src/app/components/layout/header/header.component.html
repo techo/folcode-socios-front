@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleSidebar()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <a>
+        <img src="../../../../assets/logo-techo/Logo PNG en negativo.png" class="logo" routerLink="/home-adm">
+    </a>
+    <span class="example-spacer"></span>
+    <ul class="row m-0 align-items-center">
+        <li>
+            <button
+                mat-button
+                [matMenuTriggerFor]="menu"
+                class="button mt-2 d-flex align-items-center">
+                <mat-icon class="account">account_circle</mat-icon>
+                
+            </button>
+            <mat-menu #menu="matMenu">
+                <button class="button" mat-menu-item routerLink="/recuperar-contraseña-adm">
+                    <mat-icon>vpn_key</mat-icon>
+                    Cambiar contraseña
+                </button>
+                <button class="button" type="button" mat-menu-item (click)="logout()" >
+                    <mat-icon>exit_to_app</mat-icon>
+                    Cerrar sesión
+                </button>
+            </mat-menu>
+        </li>
+    </ul>
+</mat-toolbar>

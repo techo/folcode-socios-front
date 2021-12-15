@@ -1,0 +1,74 @@
+<div *ngIf="!flagCambiar" style="background: #fff;">
+    <div>
+        <button class="arrow" matTooltip="Volver atrás" (click)="openDialog()">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+    </div>
+
+    <div class="centro">
+        <div class="panel">
+            <div class="card card--front">
+                <div class="card__owner">{{datosTarjeta.value.tarjeta}}</div>
+                <div class="card__number">XXXX XXXX XXXX {{datosTarjeta.value.numTarjeta}}</div>
+            </div>
+        </div>
+    </div>
+
+    <form [formGroup]="datosTarjeta">
+        <div class="mb-5 centro">
+            <div class="contenedor">
+                <label class="form-label">Tipo</label>
+                <select type="text" class="input" name="provincia" id="tarjeta" formControlName="tarjeta" required>
+                    <option value="">Seleccioná una opción</option>
+                    <option *ngFor="let item of tipoTarjeta" value="{{item}}">{{ item }}</option>
+                </select>
+                <div class="text-danger" *ngIf="datosTarjeta.controls['tarjeta'].hasError('required') && (datosTarjeta.controls['tarjeta'].dirty || datosTarjeta.controls['tarjeta'].touched)">Seleccione una opción</div>
+            </div>
+        </div>
+        <div class="mb-5 centro">
+            <div class="contenedor">
+                <label class="form-label">Últimos 4 números de la tarjeta</label>
+                <input type="number" class="input" id="numTarjeta" placeholder="1234" formControlName="numTarjeta" min="0" max="9999" maxlength="4" #inputTarjeta
+                oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                <div class="text-danger" *ngIf="datosTarjeta.controls['numTarjeta'].hasError('required') && (datosTarjeta.controls['numTarjeta'].dirty || datosTarjeta.controls['numTarjeta'].touched)">Ingrese los últimos 4 dígitos</div>
+            </div>
+        </div>
+    
+        <div class="centro">
+            <button class="donacion" (click)="cambiar()" [disabled]="datosTarjeta.invalid || inputTarjeta.value.toString().length < 4">Cambiar</button>
+        </div>
+    </form>
+
+</div>
+
+<div *ngIf="flagCambiar" style="background: #fff;">
+    <div>
+        <button class="arrow" matTooltip="Volver atrás" (click)="openDialog()">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+    </div>
+
+    <div class="centro mb-3">
+        <h3>Tarjeta Solicitada:</h3>
+    </div>
+    <div class="texto mb-3">
+        <h4 style="color: #868686;">Estás realizando el cambio de una tarjeta a otra cuyos 4 últimos</h4>
+        <h4 style="color: #868686;">números son los que se visualizan en la imagen</h4>
+    </div>
+    <div class="centro">
+        <div class="panel">
+            <div class="cards card--front">
+                <div class="card__owner">{{datosTarjeta.value.tarjeta}}</div>
+                <div class="card__number">XXXX XXXX XXXX {{datosTarjeta.value.numTarjeta}}</div>
+            </div>
+        </div>
+    </div>
+
+        <div class="centro">
+            <button class="donacion" type="button" (click)="enviarTarjeta()">Enviar</button>
+        </div>
+
+    <div class="texto">
+        <p style="color: #868686;">Para TECHO tu seguridad es prioridad, tus datos están protegidos por nuestra política de privacidad</p>
+    </div>
+</div>

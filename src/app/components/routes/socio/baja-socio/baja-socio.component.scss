@@ -1,0 +1,501 @@
+.arrow {
+    color: #0092DD;
+    height: 100%;
+    font-size: 40px;
+    margin-left: 5%;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.loading{
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.button {
+    width: 130px;
+    height: 50px;
+    background: #fff;
+    border-radius: 80px;
+    border: solid 1px #0092DD;
+    margin-bottom: 30px;
+    color: #0092DD;
+    cursor: pointer;
+    &:hover{
+        background: #0092DD;
+        color: #fff;
+    }
+}
+.buttonn {
+    width: 130px;
+    height: 50px;
+    background: #0092DD;
+    border-radius: 80px;
+    border: solid 1px #0092DD;
+    margin-right: 45px;
+    margin-bottom: 30px;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+        background: #fff;
+        color: #0092DD;
+    }
+}
+.img_baja{
+    width: 400px;
+    height: 40%;
+    object-fit: cover;
+}
+.texto_solicitud{
+    margin-top: 10px;;
+    background-color: #0092DD;
+    color: #fff;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.caja_baja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preguntas{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #868686;
+}
+.input_sig{
+    margin-top: 5px;
+}
+.textarea{
+    width: 50%;
+    border-radius: 20px;
+}
+.requerido{
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color:#ee0933;
+}
+.posicion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.texto_cuadro1{
+    font-size: 1.8rem;
+}
+.texto_cuadro2{
+    font-size: 1.5rem;
+}
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 40px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 2px solid #868686;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 60%;
+    box-sizing: border-box;
+    color: #868686;
+    font-size: 1rem;
+    height: 100px;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 2px solid #ee0933;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #0092DD;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin-top: 40px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+/*headings*/
+.title {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #868686;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 30%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 31px;
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 0px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 95%;
+    height: 5px;
+
+    position: absolute;
+    left: -47%;
+    top: 11px;
+    
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #ee0933;
+    color: white;
+}
+
+
+
+#progressbar li.inactive:before{
+    background: #e5ae67;
+    color: #000;
+
+}
+
+fieldset {
+/* for chrome and safari*/
+-webkit-animation-duration: .25ms;-webkit-animation-name: slidein;
+
+/*for firefox*/
+-moz-animation-duration: 1s;-moz-animation-name: slidein;
+
+/* for opera*/
+-o-animation-duration: 1s;-o-animation-name: slidein;
+
+/* Standard syntax*/
+    animation-duration: 1s;animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+        from { margin-right:100%;width:300%;}
+        to { margin-right: 0%;width: 100%;           }
+}
+
+@-moz-keyframes slidein {
+        from {
+            margin-left: 100%;width: 300%;
+        }
+        to {
+            margin-left: 0%; width: 100%;
+        }
+}
+@-o-keyframes slidein {
+        from {
+            margin-left: 100%;width: 300%;
+}
+
+        to {
+            margin-left: 0%;width: 100%;
+        }
+}
+@keyframes slidein {
+        from {
+            margin-left: 100%;width: 300%;
+        }
+
+        to {
+            margin-left: 0%;width: 100%;
+        }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .arrow {
+        color: #0092DD;
+        height: 100%;
+        font-size: 40px;
+        margin-left: 5%;
+        outline: none;
+        border: 0;
+        background: transparent;
+    }
+    .button {
+        width: 130px;
+        height: 50px;
+        background: #fff;
+        border-radius: 80px;
+        border: solid 1px #0092DD;
+        margin-bottom: 30px;
+        color: #0092DD;
+        cursor: pointer;
+        &:hover{
+            background: #0092DD;
+            color: #fff;
+        }
+    }
+    .buttonn {
+        width: 130px;
+        height: 50px;
+        background: #0092DD;
+        border-radius: 80px;
+        border: solid 1px #0092DD;
+        margin-right: 15px;
+        margin-bottom: 30px;
+        color: #fff;
+        cursor: pointer;
+        &:hover{
+            background: #fff;
+            color: #0092DD;
+        }
+    }
+    .img_baja{
+        width: 260px;
+        border-radius: 30px;
+        object-fit: cover;
+    }
+    .texto_solicitud{
+        margin-top: 15px;
+        background-color: #0092DD;
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .texto_cuadro1{
+        font-size: 1.4rem;
+    }
+    .texto_cuadro2{
+        font-size: 1rem;
+    }
+    .caja_baja{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .preguntas{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #868686;
+    }
+    .input_sig{
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .textarea{
+        width: 50%;
+        border-radius: 20px;
+    }
+    .requerido{
+        margin-top: -10px;
+        margin-bottom: 20px;
+        color:#ee0933;
+    }
+    .posicion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    /*progressbar*/
+    #progressbar {
+        margin-bottom: 20px;
+        overflow: hidden;
+        counter-reset: step;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 40px;
+    }
+    #progressbar li {
+        list-style-type: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 9px;
+        width: 30%;
+        float: left;
+        position: relative;
+        letter-spacing: 1px;
+    }
+    #progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 30px;
+        height: 30px;
+        line-height: 31px;
+        display: block;
+        font-size: 1rem;
+        color: #333;
+        background: white;
+        border-radius: 25px;
+        margin: 0 auto 0px auto;
+    }
+    #progressbar li:after {
+        content: '';
+        width: 95%;
+        height: 5px;
+        position: absolute;
+        left: -47%;
+        top: 11px;
+    }
+    #progressbar li:first-child:after {
+        content: none;
+    }
+    #progressbar li.active:before, #progressbar li.active:after {
+        background: #ee0933;
+        color: white;
+    }
+    #progressbar li.inactive:before{
+        background: #e5ae67;
+        color: #000;
+    }
+    #msform fieldset {
+        background: white;
+        border-radius: 40px;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        padding: 20px 30px;
+        box-sizing: border-box;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+    .title {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: #868686;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    #msform input, #msform textarea {
+        padding: 15px;
+        border: 2px solid #868686;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        color: #868686;
+        font-size: 1rem;
+        height: 120px;
+    }
+}

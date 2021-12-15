@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+body {font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Snackbar de Angular Material
+.error{
+    background: #EA3F3F !important;
+    color: #fff !important;
+}
+.verificado{
+    background: #35AA65 !important;
+    color: #fff !important;
+}
+.alerta{
+    background: #e2c000 !important;
+    color: #fff !important;
+}
+.exito{
+    background: #35AA65 !important;
+    color: #fff !important;
+}
+.esperar{
+    background: #e2c000 !important;
+    color: #fff !important;
+}
+tr.mat-row{
+    height: 48px;
+    border-bottom: 1px solid #e0e0e0;
+}
+@media only screen and (max-width: 1000px) {
+    mat-dialog-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    mat-dialog-actions{
+        display: flex;
+        justify-content: center;
+
+    }
+}

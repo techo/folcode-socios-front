@@ -1,0 +1,122 @@
+.caja_alta{
+    display: flex;
+
+}
+.mf{
+    margin-left: 180px;
+    width: 800px;
+}
+.formu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: -47px;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: -20px;
+}
+
+.form-control{
+    height: 60px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.sel{
+    width: 300px;
+    height: 60px;
+    border-radius: 4px;
+    margin-top: 0px;
+    border: 1px solid black;
+}
+.posicion{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 4rem;
+}
+.but_alta{
+    position: absolute;
+    background-color:#0092DD;
+    color: white;
+    border-radius: 20px;
+    height: 55px;
+    width: 150px;
+    margin-left: 650px;
+    margin-top: -10px;
+}
+.button {
+    width: 130px;
+    height: 50px;
+    background: #fff;
+    border-radius: 80px;
+    border: solid 1px #0092DD;
+    margin-bottom: 30px;
+    color: #0092DD;
+    cursor: pointer;
+    &:hover{
+        background: #0092DD;
+        color: #fff;
+    }
+}
+.arrow {
+    color: #0092DD;
+    height: 100%;
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: 1%;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+@media only screen and (max-width: 1000px) {
+    .caja_alta{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mf{
+        margin-left: 80px;
+        width: 300px;
+    }
+    .formu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-left: -47px;
+    }
+    .cont{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    
+    .form-control{
+        height: 60px;
+        width: 300px;
+        border-radius: 4px;
+        border: 1px solid black;
+    }
+    
+    .sel{
+        width: 300px;
+        height: 60px;
+        border-radius: 4px;
+        margin-top: 0px;
+        border: 1px solid black;
+    }
+    .posicion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+        margin-left: -80px;
+
+    }
+}

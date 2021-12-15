@@ -1,0 +1,29 @@
+<div class="loading" *ngIf="loading">
+    <mat-spinner diameter=50></mat-spinner>
+</div>
+<div *ngIf="!loading" style="overflow-x: hidden;">
+    <div style="background: #fff;">
+        <div>
+            <button class="arrow" matTooltip="Volver atrás" routerLink="/donacion">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+        </div>
+        <div class="mb-4 centro">
+            <h3>Donas con esta tarjeta:</h3>
+        </div>
+        <div class="centro">
+            <div class="panel">
+                <div class="card card--front">
+                    <div class="card__owner" *ngIf="tarjeta">{{tarjeta}}</div>
+                    <div class="card__number" *ngIf="numero">XXXX XXXX XXXX {{numero}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5 centro">
+            <h4 style="color: #868686;">Podés cambiar la tarjeta tocando el botón "Cambiar".</h4>
+        </div>
+        <div class="centro">
+            <button class="donacion" routerLink="/cambiar-tarjeta">Cambiar</button>
+        </div>
+    </div>
+</div>

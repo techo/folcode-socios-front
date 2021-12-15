@@ -1,0 +1,41 @@
+<div style="background: #fff; height: 100%;">
+    <div class="loading" *ngIf="loading">
+        <mat-spinner diameter=50></mat-spinner>
+    </div>
+    <div *ngIf="!loading">
+        <div>
+            <button class="arrow" matTooltip="Volver atrás" routerLink="/donacion">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+        </div>
+        <div class="ancho">
+            <div class="titulo mb-3">
+                <h3>Actualmente donas:</h3>
+            </div>
+            <div class="mb-5">
+                <div class="cuadro">
+                    <div class="contador">
+                        <div class="fondo-signo">
+                            <mat-icon>attach_money</mat-icon>
+                        </div>
+                        <div class="fondo-numero" *ngIf="monto">
+                            {{monto}}
+                        </div>
+                        <div class="flecha">
+                                <mat-icon>expand_less</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+                <div class="text-center" style="color: #868686;">
+                    <h4>Podés editar el monto de tu donación tocando el botón "editar".</h4>
+                    <h4>Después podés subir la cantidad de la donación tocando la flecha.</h4>
+                </div>
+            </div>
+        </div>
+        <div class="ancho">
+            <button class="boton" routerLink="/donacion-mensual-editar">Editar</button>
+        </div>
+    </div>
+</div>

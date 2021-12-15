@@ -1,0 +1,142 @@
+.arrow {
+    color: #0092DD;
+    height: 100%;
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: 1%;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.botones{
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5rem !important;
+    margin-left: 80px; 
+}
+.unica {
+    width: 200px;
+    height: 55px;
+    background: #fff;
+    border-radius: 0px;
+    border: solid 1px #0092DD;
+    margin-bottom: 30px;
+    color: #0092DD;
+    cursor: pointer;
+    margin-right: 40px;
+    &:hover{
+        background: #0092DD;
+        color: #fff;
+    }
+}
+.bancaria {
+    width: 200px;
+    height: 55px;
+    background: #0092DD;
+    border-radius: 0px;
+    border: solid 1px #0092DD;
+    margin-right: 45px;
+    margin-bottom: 30px;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+        background: #fff;
+        color: #0092DD;
+    }
+}
+.ancho{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo{
+    margin-right: 25rem;
+}
+.tarjeta{
+    padding: 35px;
+    margin-bottom: 2rem;
+    color: #fff;
+    background-color: #0092DD;
+}
+.tamaño{
+    font-size: 1.3rem;
+}
+.texto{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 50%;
+}
+@media only screen and (max-width: 1000px) {
+    .botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem !important;
+        margin-left: 15px;
+    }
+    .unica {
+        width: 200px;
+        height: 55px;
+        background: #0092DD;
+        border-radius: 0px;
+        border: solid 1px #0092DD;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 40px;
+        &:hover{
+            background: #fff;
+            color: #0092DD;
+        }
+    }
+    .bancaria {
+        width: 200px;
+        height: 55px;
+        background: #fff;
+        border-radius: 0px;
+        border: solid 1px #0092DD;
+        margin-bottom: 30px;
+        margin-right: 10px;
+        color: #0092DD;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background: #0092DD;
+            color: #fff;
+        }
+    }
+    .ancho{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5px;
+    }
+    .titulo{
+        margin-right: 18rem;
+        margin-left: 50px;
+    }
+    .tarjeta{
+        padding: 35px;
+        margin-bottom: 2rem;
+        color: #fff;
+        background-color: #0092DD;
+    }
+    .tamaño{
+        font-size: 1rem;
+    }
+    .texto{
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 90%;
+    }
+}

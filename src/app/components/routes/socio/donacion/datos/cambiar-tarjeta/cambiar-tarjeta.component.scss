@@ -1,0 +1,153 @@
+.arrow {
+    color: #0092DD;
+    height: 100%;
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: 1%;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.donacion{
+    width: 120px;
+    height: 50px;
+    background: #0092DD;
+    border-radius: 30px;
+    border: solid 2px #0092DD;
+    margin-bottom: 15px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px;
+    &:hover{
+        background: #fff;
+        color: #0092DD;
+    }
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    height: 60px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+//Card
+.panel {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.card {
+    font: 25px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 425px;
+    height: 270px;
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 50px;
+    color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #D4D4D4;
+    box-shadow: 0.864111px 3.45645px 8.64112px rgba(0, 0, 0, 0.45);
+    &__number {
+        font-size: 30px;
+        padding: 70px 0 15px;
+        text-align: center;
+    }
+    &__owner {
+        text-align: left;
+    }
+}
+.cards{
+    font: 25px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 425px;
+    height: 270px;
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 50px;
+    color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 3.29%, rgba(0, 0, 0, 0.120049) 7.94%, rgba(0, 0, 0, 0.0135417) 20.91%, rgba(0, 0, 0, 0.0116178) 30.6%, rgba(0, 0, 0, 0.00992476) 54.31%, rgba(0, 0, 0, 0) 67.11%), #D7A74A;
+    box-shadow: 0.864111px 3.45645px 8.64112px rgba(0, 0, 0, 0.45);
+    &__number {
+        font-size: 30px;
+        padding: 70px 0 15px;
+        text-align: center;
+    }
+    &__owner {
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .cards{
+        font: 25px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 95%;
+        height: 200px;
+        text-align: left;
+        padding: 30px;
+        margin-bottom: 50px;
+        color: #fff;
+        border-radius: 20px;
+        box-sizing: border-box;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 3.29%, rgba(0, 0, 0, 0.120049) 7.94%, rgba(0, 0, 0, 0.0135417) 20.91%, rgba(0, 0, 0, 0.0116178) 30.6%, rgba(0, 0, 0, 0.00992476) 54.31%, rgba(0, 0, 0, 0) 67.11%), #D7A74A;
+        box-shadow: 0.864111px 3.45645px 8.64112px rgba(0, 0, 0, 0.45);
+        &__number {
+            font-size: 25px;
+            padding: 30px 0 0px;
+            text-align: center;
+        }
+        &__owner {
+            text-align: left;
+        }
+    }
+    .card {
+        font: 25px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 95%;
+        height: 200px;
+        text-align: left;
+        padding: 30px;
+        margin-bottom: 50px;
+        color: #fff;
+        border-radius: 20px;
+        box-sizing: border-box;
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #D4D4D4;
+        box-shadow: 0.864111px 3.45645px 8.64112px rgba(0, 0, 0, 0.45);
+        &__number {
+            font-size: 25px;
+            padding: 30px 0 0px;
+            text-align: center;
+        }
+        &__owner {
+            text-align: left;
+        }
+    }
+}

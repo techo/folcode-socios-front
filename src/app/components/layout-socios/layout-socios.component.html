@@ -1,0 +1,12 @@
+<app-header-socios (toggleSidebarForMe)="sideBarToggler()"></app-header-socios>
+<mat-drawer-container >
+    <mat-drawer style="background: #0092DD; overflow-y: hidden;" mode="over" (click)="closeSideBar($event)" [opened]="sideBarOpen">
+        <app-sidenav-socios></app-sidenav-socios>
+    </mat-drawer>
+    <mat-drawer-content>
+            <div style="height: 100%;">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+<app-footer-socios></app-footer-socios>

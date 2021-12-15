@@ -1,0 +1,162 @@
+.arrow {
+    color: #0092DD;
+    height: 100%;
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: 1%;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.botones{
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5rem !important;
+    margin-left: 80px; 
+}
+.unica {
+    width: 200px;
+    height: 55px;
+    background: #fff;
+    border-radius: 0px;
+    border: solid 1px #0092DD;
+    margin-bottom: 30px;
+    color: #0092DD;
+    cursor: pointer;
+    margin-right: 40px;
+    &:hover{
+        background: #0092DD;
+        color: #fff;
+    }
+}
+.bancaria {
+    width: 200px;
+    height: 55px;
+    background: #0092DD;
+    border-radius: 0px;
+    border: solid 1px #0092DD;
+    margin-right: 45px;
+    margin-bottom: 30px;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+        background: #fff;
+        color: #0092DD;
+    }
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.pagos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.donacion{
+    width: 120px;
+    height: 50px;
+    background: #fff;
+    border-radius: 30px;
+    border: solid 2px #0092DD;
+    margin-bottom: 15px;
+    color: #0092DD;
+    cursor: pointer;
+    margin-right: 20px;
+    &:hover{
+        background: #0092DD;
+        color: #fff;
+    }
+    &_numero{
+        color: #0092DD;
+        width: 120px;
+        height: 50px;
+        border-radius: 30px;
+        margin-left: -20px;
+        margin-top: 5px;
+        font-size: 1rem;
+    &:hover{
+        color: #fff;
+    }
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem !important;
+        margin-left: 15px;
+    }
+    .unica {
+        width: 200px;
+        height: 55px;
+        background: #fff;
+        border-radius: 0px;
+        border: solid 1px #0092DD;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        color: #0092DD;
+        cursor: pointer;
+        margin-right: 40px;
+        &:hover{
+            background: #0092DD;
+            color: #fff;
+        }
+    }
+    .bancaria {
+        width: 200px;
+        height: 55px;
+        background: #0092DD;
+        border-radius: 0px;
+        border: solid 1px #0092DD;
+        margin-bottom: 30px;
+        margin-right: 10px;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background: #fff;
+            color: #0092DD;
+        }
+    }
+    .pagos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-right: 20px;
+    }
+    .donacion{
+        width: 110px;
+        height: 50px;
+        background: #fff;
+        border-radius: 30px;
+        border: solid 2px #0092DD;
+        margin-bottom: 25px;
+        color: #0092DD;
+        cursor: pointer;
+        margin-right: -20px;
+        &:hover{
+            background: #0092DD;
+            color: #fff;
+        }
+        &_numero{
+            color: #0092DD;
+            margin-left: -22px;
+        &:hover{
+            color: #fff;
+        }
+        }
+    }
+}

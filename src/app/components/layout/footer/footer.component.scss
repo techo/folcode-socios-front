@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+.footer {
+    font-size: 1rem ;
+    margin-top: 1rem ;
+    margin-bottom: 1rem;
+}
+
+.techo {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: -10%;
+}
+
+.sociales {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.icon {
+    color:#fff;
+    margin-left: 15px;
+}

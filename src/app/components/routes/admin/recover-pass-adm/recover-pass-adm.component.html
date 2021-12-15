@@ -1,0 +1,16 @@
+<div class="body">
+    <div class="contenedor">
+        <div class="row justify-content-center">
+            <img class="logo" src="../../../../assets/logo-techo/Logo PNG en RGB.png">
+        </div>
+        <mat-card class="card">Ingresá tu correo electrónico y te enviaremos un link de recuperación</mat-card>
+        <form>
+            <mat-form-field class="input" appearance="outline">
+                <mat-label>Correo Electrónico</mat-label>
+                <input matInput placeholder="nombre@correo.com" [(ngModel)]="email" type="email" name="email" required>
+            </mat-form-field>
+            <br>
+            <button class="button" type="submit" (click)="sendEmail()">Recuperar</button>
+        </form>
+    </div>
+</div>

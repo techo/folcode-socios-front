@@ -1,0 +1,59 @@
+<div style="background: #fff; height: 100%;">
+    <div>
+        <button class="arrow" matTooltip="Volver atrás" routerLink="/home-socios">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+    </div>
+    <div>
+        <div class="text-center mb-5">
+            <h2 style="color: #868686;">Elegí una opción</h2>
+        </div>
+        <div class="text-center">
+            <p> <b>Donación única</b> vas a tener la posibilidad de donar por única vez un monto que vos elijas.</p>
+            <p> <b>Donación mensual</b> podés ver y cambiar el monto que donás mensualmente en TECHO.</p>
+            <p> <b>Datos de pago</b> podés ver y cambiar la tarjeta con la que donás en TECHO.</p>
+        </div>
+    </div>
+    <div>
+        <div class="row mw-100 d-flex justify-content-around mt-5">
+
+            <div class="col-md-4 card text-center caja">
+                    <button class="btn card-body posicion" routerLink="/donacion-unica">
+                        <div class="fondo-signo">
+                            <mat-icon>attach_money</mat-icon>
+                        </div>
+                        <div class="">
+                            <div class="posicionTexto">
+                                <h5 class="card-title text">Donación Única</h5>
+                            </div>
+                        </div>
+                    </button>
+            </div>
+
+            <div class="col-md-4 card text-center caja">
+                <button class="btn card-body posicion" routerLink="/donacion-mensual">
+                    <div class="fondo-signo">
+                        <mat-icon>calendar_today</mat-icon>
+                    </div>
+                    <div class="">
+                        <div class="posicionTexto">
+                            <h5 class="card-title text">Donación Mensual</h5>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-md-4 card text-center caja">
+                    <button class="btn card-body posicion" routerLink="/datos-de-pago">
+                        <div class="fondo-signo">
+                            <mat-icon>payment</mat-icon>
+                        </div>
+                        <div class="">
+                            <div class="posicionTexto">
+                                <h5 class="card-title text">Datos de pago</h5>
+                            </div>
+                        </div>
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>

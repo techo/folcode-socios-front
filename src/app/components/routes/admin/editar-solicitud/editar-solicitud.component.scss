@@ -1,0 +1,99 @@
+.caja_alta{
+    display: flex;
+
+}
+.mf{
+    margin-left: 180px;
+    width: 800px;
+}
+.formu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: -47px;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: -20px;
+}
+.caja_altader{
+    background-color: blueviolet;
+}
+.loading{
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.form-control{
+    height: 60px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.sel{
+
+    width: 300px;
+    height: 60px;
+    border-radius: 4px;
+    margin-top: 0px;
+    border: 1px solid black;
+}
+
+.solicitud{
+    display: flex;
+    flex-direction: column;
+    padding-left: 17%;
+}
+.botones{
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 2.5rem !important;
+    margin-left: 80px;
+}
+.button {
+    width: 150px;
+    height: 55px;
+    background: #fff;
+    border-radius: 80px;
+    border: solid 1px #0092DD;
+    margin-bottom: 30px;
+    color: #0092DD;
+    cursor: pointer;
+    margin-right: 40px;
+    &:hover{
+        background: #0092DD;
+        color: #fff;
+    }
+}
+.buttonn {
+    width: 150px;
+    height: 55px;
+    background: #0092DD;
+    border-radius: 80px;
+    border: solid 1px #0092DD;
+    margin-right: 45px;
+    margin-bottom: 30px;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+        background: #fff;
+        color: #0092DD;
+    }
+}
+.arrow {
+    color: #0092DD;
+    height: 100%;
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: 1%;
+    outline: none;
+    border: 0;
+    background: transparent;
+}

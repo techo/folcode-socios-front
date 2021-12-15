@@ -1,0 +1,33 @@
+<div style="overflow-x: hidden;">
+    <div class="row" style="height: 90%;">
+        <div class="col logo">
+            <div>
+                <img src="../../../../assets/imagenes/Construccion_33.jpg" height="100%" width="100%" >
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="login">
+                <img src="../../../../assets/logo-techo/Logo PNG en RGB.png" class="img">
+                <form [formGroup]="form" name="login">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Correo electrónico</mat-label>
+                        <input type="email" matInput placeholder="nombre@correo.com" autocomplete="off" formControlName="email">
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" autocomplete="off" formControlName="password">
+                        <button mat-icon-button matSuffix type="button" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </form>
+                <button class="button" type="submit" (click)="login()">Entrar</button>
+                <br>
+                <a mat-button [routerLink]="['/recuperar-contraseña']">Olvidé mi contraseña</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<app-footer class="pie" style="overflow-x: hidden;"></app-footer>

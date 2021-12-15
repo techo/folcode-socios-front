@@ -1,0 +1,53 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+.footer {
+    font-size: 1rem ;
+    margin-top: 1rem ;
+    margin-bottom: 1rem;
+}
+
+.techo {
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 0px;
+}
+
+.sociales {
+    color: #fff;
+    max-width: 10%;
+    margin-right: 35px;
+}
+
+.icon {
+    color:#fff;
+    margin-left: 15px;
+}
+.alto{
+    height: 90px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer {
+        font-size: 0.7rem ;
+        margin-top: 1rem ;
+        margin-bottom: 1rem;
+    }
+    .sociales {
+        color: #fff;
+        max-width: 12%;
+        margin-right: 45px;
+    }
+    .techo {
+        color: #fff;
+        font-size: 0.7rem;
+        margin: 0px;
+    }
+}

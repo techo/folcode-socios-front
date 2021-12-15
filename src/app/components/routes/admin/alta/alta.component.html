@@ -1,0 +1,138 @@
+<div>
+    <button class="arrow" matTooltip="Volver atrás" (click)="openDialog()" > <!-- routerLink="/home-adm" -->
+        <mat-icon>arrow_back</mat-icon> 
+    </button>
+</div>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-12 caja_alta mt-5">
+
+            <form [formGroup]="datosSocios" (ngSubmit)="enviarUser()" class="mf">
+                <h4>Datos Personales</h4>
+
+                <div class="mb-5 formu">
+
+                    <div class="cont">
+                        <label  class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre"
+                            placeholder="Escribí tu nombre" formControlName="nombre" required>
+                            <div class="text-danger" *ngIf="datosSocios.controls['nombre'].hasError('required') && (datosSocios.controls['nombre'].dirty || datosSocios.controls['nombre'].touched)">Este campo es requerido</div>
+                    </div>
+
+                    
+                    
+                    <div class="cont">
+                        <label  class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido"
+                            placeholder="Escribí tu apellido" formControlName="apellido" required>
+                            <div class="text-danger" *ngIf="datosSocios.controls['apellido'].hasError('required') && (datosSocios.controls['apellido'].dirty || datosSocios.controls['apellido'].touched)">Este campo es requerido</div>
+                    </div>
+
+                </div>
+                <div class="mb-3 formu">
+                    <div class="cont">
+                        <label  class="form-label">DNI</label>
+                        <input type="number" class="form-control" id="dni"
+                            placeholder="Escribí tu DNI sin puntos y espacios" formControlName="dni" autocomplete="off" maxlength="8"
+                            oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                            <div class="text-danger" *ngIf="datosSocios.controls['dni'].hasError('required') && (datosSocios.controls['dni'].dirty || datosSocios.controls['dni'].touched)">Escribí sin puntos ni espacios</div>
+
+                    </div>
+
+                    <div class="cont">
+
+                        <label  class="form-label">Provincia donde Reside</label>
+                        <select type="text" class="sel" name="provincia" id="provincia" formControlName="provincia" required>
+
+                            <option value="">Seleccioná una opción</option>
+                            <option *ngFor= "let provincia of provincias" value="{{ provincia }}">{{ provincia }}</option>
+
+                        </select>
+                        <div class="text-danger" *ngIf="datosSocios.controls['provincia'].hasError('required') && (datosSocios.controls['provincia'].dirty || datosSocios.controls['provincia'].touched)">Seleccione una opción</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 formu">
+                    <div class="cont">
+                        <label  class="form-label">Teléfono Celular</label>
+                        <input type="number" class="form-control" id="telef"
+                            placeholder="Escribí sin el 0 y sin el 15" formControlName="telef" required>
+                            <div class="text-danger" *ngIf="datosSocios.controls['telef'].hasError('required') && (datosSocios.controls['telef'].dirty || datosSocios.controls['telef'].touched)">Sin puntos ni guiones</div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+
+                    <h4 class="mt-3">Cuenta Socio/a</h4>
+
+                    <div class="mb-5 formu">
+
+                        <div class="cont">
+                            <label  class="form-label">Correo Electrónico</label>
+                            <input type="text" class="form-control" id="mail"
+                                aria-describedby="emailHelp" placeholder="alguien@ejemplo.com" formControlName="mail" required>
+                                <div class="text-danger" *ngIf="datosSocios.controls['mail'].hasError('required') && (datosSocios.controls['mail'].dirty || datosSocios.controls['mail'].touched)">Ingrese un email válido</div>
+                        </div>
+
+                        <div class="cont">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contrasena"
+                                placeholder="Mínimo 8 caracteres" autocomplete="off" formControlName="contrasena" required>
+                                <div class="text-danger" *ngIf="datosSocios.controls['contrasena'].hasError('required') && (datosSocios.controls['contrasena'].dirty || datosSocios.controls['contrasena'].touched)">Mínimo 8 caracteres</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-5">
+
+                    <h4 class="mt-3">Datos de Pago</h4>
+
+                    <div class="mb-5 formu">
+
+                        <div class="cont">
+                            <label  class="form-label">Tipo</label>
+                            <select type="text" class="sel" name="provincia" id="tarjeta" formControlName="tarjeta" required>
+
+                                <option value="">Seleccioná una opción</option>
+                                <option *ngFor= "let item of tipoTarjeta" value="{{item}}">{{ item }}</option>
+
+                            </select>
+                            <div class="text-danger" *ngIf="datosSocios.controls['tarjeta'].hasError('required') && (datosSocios.controls['tarjeta'].dirty || datosSocios.controls['tarjeta'].touched)">Seleccione una opción</div>
+                        </div>
+
+                        <div class="cont">
+                            <label  class="form-label">Monto a donar</label>
+                            <input type="number" class="form-control" id="monto"
+                                placeholder="Escribí el monto sin puntos ni comas" formControlName="monto" required>
+                                <div class="text-danger" *ngIf="datosSocios.controls['monto'].hasError('required') && (datosSocios.controls['monto'].dirty || datosSocios.controls['monto'].touched)">Ingrese el monto</div>
+                        </div>
+
+                    </div>
+
+                    <div class=" formu">
+
+                        <div class="cont">
+                            <label  class="form-label">Últimos 4 números de la tarjeta</label>
+                            <input type="number" class="form-control" id="numTarjeta"
+                                placeholder="1234" formControlName="numTarjeta" maxlength="4" min="0"
+                                oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                                <div class="text-danger" *ngIf="datosSocios.controls['numTarjeta'].hasError('required') && (datosSocios.controls['numTarjeta'].dirty || datosSocios.controls['numTarjeta'].touched)">Ingrese los 4 dígitos</div>
+                        </div>
+
+                    </div>
+                    <div class="botones">
+                        <button  class=" buttonn" type="submit">Dar el Alta</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

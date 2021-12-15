@@ -1,0 +1,77 @@
+.arrow {
+    color: #0092DD;
+    height: 100%;
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: 1%;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.loading{
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.ancho{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.cuadro{
+    background-color: #F5F5F5;
+    width: 300px;
+    height: 100%;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.45);
+    border-radius: 5.3125px;
+}
+.contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.fondo-numero{
+    background-color: #231837;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.45);
+    border-radius: 5.3125px;
+}
+.fondo-signo{
+    background-color: #0092DD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60%;
+    height: 55px;
+    width: 55px;
+}
+.flecha{
+    color: #0092DD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+.boton{
+    width: 120px;
+    height: 50px;
+    background: #0092DD;
+    border-radius: 30px;
+    border: solid 2px #0092DD;
+    margin-bottom: 15px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px;
+    &:hover{
+        background: #fff;
+        color: #0092DD;
+    }
+}

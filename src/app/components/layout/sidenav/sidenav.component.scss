@@ -1,0 +1,40 @@
+.logo {
+    text-align: center;
+    padding: 2.6rem 1rem;
+    img {
+    width: 200px;
+    }
+}
+.mat-list-item {
+    color: #000 !important;
+    font-size: 1rem;
+    height: 45px !important;
+    margin-bottom: 30px;
+    &:hover {
+    color: #0092DD !important;
+    }
+    ::ng-deep {
+    .mat-list-item-content {
+        border-radius: 5px;
+        margin: 0 8px;
+        &:hover {
+        background: #fff !important;
+        }
+    }
+    }
+}
+.list-item-active {
+    color: #0092DD !important;
+    ::ng-deep {
+    .mat-list-item-content {
+        background: #fff !important;
+        &:hover {
+        background: #fff !important;
+        }
+    }
+    }
+}
+.mat-icon {
+    margin-right: 10px;
+}
+//#0092DD
